@@ -1,608 +1,819 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>CarrierBliss | The Modern Freight Platform</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "on-tertiary-container": "#ffffff",
-              "tertiary": "#3a3c3c",
-              "surface-container-lowest": "#ffffff",
-              "on-secondary-fixed": "#1b1c1c",
-              "tertiary-fixed": "#5d5f5f",
-              "secondary-container": "#d6d4d3",
-              "on-tertiary-fixed-variant": "#e2e2e2",
-              "on-primary-fixed-variant": "#e2e2e2",
-              "on-secondary-fixed-variant": "#3b3b3b",
-              "on-error": "#ffffff",
-              "outline-variant": "#c6c6c6",
-              "tertiary-container": "#737575",
-              "on-primary-fixed": "#ffffff",
-              "secondary-fixed": "#c8c6c6",
-              "primary-fixed": "#5e5e5e",
-              "surface-dim": "#dadada",
-              "secondary-fixed-dim": "#acabab",
-              "surface": "#f9f9f9",
-              "on-primary-container": "#ffffff",
-              "surface-tint": "#5e5e5e",
-              "inverse-surface": "#2f3131",
-              "on-background": "#1a1c1c",
-              "on-primary": "#e2e2e2",
-              "error-container": "#ffdad6",
-              "surface-container-low": "#f3f3f4",
-              "primary-container": "#3b3b3b",
-              "outline": "#777777",
-              "on-error-container": "#410002",
-              "primary-fixed-dim": "#474747",
-              "inverse-primary": "#c6c6c6",
-              "inverse-on-surface": "#f0f1f1",
-              "on-secondary": "#ffffff",
-              "on-secondary-container": "#1b1c1c",
-              "on-surface": "#1a1c1c",
-              "on-tertiary-fixed": "#ffffff",
-              "secondary": "#5f5e5e",
-              "tertiary-fixed-dim": "#454747",
-              "surface-variant": "#e2e2e2",
-              "surface-container": "#eeeeee",
-              "surface-bright": "#f9f9f9",
-              "on-tertiary": "#e2e2e2",
-              "error": "#ba1a1a",
-              "background": "#f9f9f9",
-              "surface-container-high": "#e8e8e8",
-              "surface-container-highest": "#e2e2e2",
-              "on-surface-variant": "#474747",
-              "primary": "#000000"
-            },
-            fontFamily: {
-              "headline": ["Inter"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>CarrierBliss | The Modern Freight Platform</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#ffffff",
+            "tertiary": "#3a3c3c",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#1b1c1c",
+            "tertiary-fixed": "#5d5f5f",
+            "secondary-container": "#d6d4d3",
+            "on-tertiary-fixed-variant": "#e2e2e2",
+            "on-primary-fixed-variant": "#e2e2e2",
+            "on-secondary-fixed-variant": "#3b3b3b",
+            "on-error": "#ffffff",
+            "outline-variant": "#c6c6c6",
+            "tertiary-container": "#737575",
+            "on-primary-fixed": "#ffffff",
+            "secondary-fixed": "#c8c6c6",
+            "primary-fixed": "#5e5e5e",
+            "surface-dim": "#dadada",
+            "secondary-fixed-dim": "#acabab",
+            "surface": "#f9f9f9",
+            "on-primary-container": "#ffffff",
+            "surface-tint": "#5e5e5e",
+            "inverse-surface": "#2f3131",
+            "on-background": "#1a1c1c",
+            "on-primary": "#e2e2e2",
+            "error-container": "#ffdad6",
+            "surface-container-low": "#f3f3f4",
+            "primary-container": "#3b3b3b",
+            "outline": "#777777",
+            "on-error-container": "#410002",
+            "primary-fixed-dim": "#474747",
+            "inverse-primary": "#c6c6c6",
+            "inverse-on-surface": "#f0f1f1",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#1b1c1c",
+            "on-surface": "#1a1c1c",
+            "on-tertiary-fixed": "#ffffff",
+            "secondary": "#5f5e5e",
+            "tertiary-fixed-dim": "#454747",
+            "surface-variant": "#e2e2e2",
+            "surface-container": "#eeeeee",
+            "surface-bright": "#f9f9f9",
+            "on-tertiary": "#e2e2e2",
+            "error": "#ba1a1a",
+            "background": "#f9f9f9",
+            "surface-container-high": "#e8e8e8",
+            "surface-container-highest": "#e2e2e2",
+            "on-surface-variant": "#474747",
+            "primary": "#000000"
           },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
         },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    @keyframes flow {
+      0% {
+        transform: translateX(-100%);
       }
-    </script>
-<style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9f9f9;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        @keyframes flow {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(200%); }
-        }
-        .animate-flow {
-            animation: flow 2s infinite linear;
-        }
-        .hero-word {
-            display: inline-block;
-            font-variation-settings: 'wght' 300;
-            transition: font-variation-settings 0.4s ease;
-            cursor: default;
-            position: relative;
-        }
-        .hero-word::after {
-            content: attr(data-word);
-            display: block;
-            font-variation-settings: 'wght' 700;
-            height: 0;
-            overflow: hidden;
-            visibility: hidden;
-            pointer-events: none;
-        }
-        .hero-word:hover {
-            font-variation-settings: 'wght' 700;
-        }
-        .hero-word-bold {
-            display: inline-block;
-            font-variation-settings: 'wght' 700;
-            cursor: default;
-        }
-    </style>
+
+      100% {
+        transform: translateX(200%);
+      }
+    }
+
+    .animate-flow {
+      animation: flow 2s infinite linear;
+    }
+
+    .hero-word {
+      display: inline-block;
+      font-variation-settings: 'wght' 300;
+      transition: font-variation-settings 0.4s ease;
+      cursor: default;
+      position: relative;
+    }
+
+    .hero-word::after {
+      content: attr(data-word);
+      display: block;
+      font-variation-settings: 'wght' 700;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .hero-word:hover {
+      font-variation-settings: 'wght' 700;
+    }
+
+    .hero-word-bold {
+      display: inline-block;
+      font-variation-settings: 'wght' 700;
+      cursor: default;
+    }
+  </style>
 </head>
+
 <body class="bg-surface text-on-background selection:bg-primary-container selection:text-white">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-[#f9f9f9]/70 dark:bg-slate-900/70 backdrop-blur-xl">
-<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-black dark:text-white" data-icon="grid_view">grid_view</span>
-<span class="text-xl font-light tracking-tighter text-black dark:text-white">CarrierBliss</span>
-</div>
-<div class="flex items-center">
-<button class="text-gray-500 dark:text-gray-400 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors rounded-full font-light tracking-tight">Log in</button>
-</div>
-</div>
-<div class="bg-[#f3f3f4] dark:bg-slate-800 h-[1px] w-full"></div>
-</header>
-<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto relative">
-<!-- Hero Section -->
-<section class="flex flex-col items-center text-center relative z-10 justify-center mb-0" style="min-height: calc(100vh - 240px);">
-<h1 class="text-4xl md:text-6xl lg:text-7xl tracking-tight text-on-surface max-w-4xl leading-[1.1] mb-8">
-                <span class="hero-word" data-word="Put">Put</span> <span class="hero-word" data-word="Your">Your</span> <span class="hero-word" data-word="Load">Load</span> <span class="hero-word" data-word="Management">Management</span> <span class="hero-word" data-word="on">on</span> <span class="hero-word-bold">Autopilot</span> <span class="hero-word" data-word="and">and</span> <span class="hero-word" data-word="Reclaim">Reclaim</span> <span class="hero-word" data-word="Your">Your</span> <span class="hero-word" data-word="Time.">Time.</span>
-            </h1>
-<p class="text-lg md:text-xl font-light text-secondary max-w-2xl leading-relaxed mb-12">
-                CarrierBliss automates every manual task slowing your fleet down — rate confirmations, load tracking, driver assignments, and settlements — all in one platform built specifically for freight carriers.
-            </p>
-<div class="flex flex-col items-center gap-4">
-<button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="bg-primary text-on-primary px-10 py-5 rounded-full text-lg font-light hover:scale-95 transition-all duration-300 shadow-xl shadow-black/5">
-                    Create your free trial account
-                </button>
-<p class="text-xs font-light text-primary-fixed tracking-wide">
-                    No credit card required. Set up in minutes.
-                </p>
-</div>
-</section>
-<!-- Hero Dashboard Screenshot -->
-<div class="w-full mb-40 relative">
-<div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#f9f9f9] to-transparent z-10 pointer-events-none rounded-t-[2rem]"></div>
-<div class="rounded-[2rem] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.12)] border border-outline-variant/10 transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_48px_100px_rgba(0,0,0,0.18)]">
-<div class="bg-surface-container-low px-5 py-3.5 flex items-center gap-3 border-b border-outline-variant/10">
-<div class="flex gap-1.5">
-<div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
-</div>
-<div class="flex-1 bg-surface-container rounded-full px-4 py-1.5 text-[10px] text-secondary/50 font-light tracking-tight">app.carrierbliss.com/dashboard</div>
-</div>
-<img src="assets/dashboard.png" alt="CarrierBliss Dashboard — Live operational overview" class="w-full block"/>
-</div>
-</div>
-<!-- 1. PROBLEM SECTION -->
-<section class="mt-40 mb-40">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="space-y-8">
-<span class="label-sm uppercase tracking-[0.05em] text-error font-medium text-[0.6875rem]">The Efficiency Gap</span>
-<h2 class="text-4xl font-light tracking-tight leading-tight">Manual data entry and using spreadsheets is killing your margins and your time.</h2>
-<div class="space-y-5 text-secondary font-light">
-<p>Every rate confirmation that lands in your inbox gets saved in a folder and requires manual data entry in multiple places.</p>
-<p>Every load needs tracking. Every driver needs assigning. Every settlement needs calculating.</p>
-<p class="text-on-surface font-medium text-lg tracking-tight">Manually.</p>
-<p class="text-sm">For every single load.</p>
-<p>That's not running a fleet. That's running a data entry operation that happens to move freight.</p>
-<p>And as your load count grows the admin time doubles with it.</p>
-<p>You're not short on drivers. You're not short on loads.</p>
-<p class="text-on-surface font-medium">You're short on hours in the day.</p>
-</div>
-</div>
-<div class="flex justify-center">
-<img src="assets/newload.png" alt="CarrierBliss — Create New Load form with AI rate confirmation upload" class="w-[27rem] rounded-2xl shadow-2xl shadow-black/10 border border-outline-variant/10"/>
-</div>
-</div>
-</section>
-<!-- BLACK BANNER 1 -->
-<div class="bg-primary px-8 md:px-20 py-20 my-40" style="width: 100vw; margin-left: calc(50% - 50vw);">
-<div class="max-w-4xl mx-auto text-center space-y-4">
-<p class="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-white leading-tight">The admin work stops here.</p>
-<p class="text-base md:text-lg font-light text-white/50 mt-6 leading-relaxed">Built for freight carriers who are done doing things manually.</p>
-</div>
-</div>
-<!-- 2. SOLUTION SECTION -->
-<section class="mt-40 mb-40 py-24 bg-surface-container-low rounded-[3rem] px-8 md:px-16 overflow-hidden">
-<div class="max-w-4xl mx-auto text-center mb-16">
-<span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">The CarrierBliss Way</span>
-<h2 class="text-4xl md:text-5xl font-light tracking-tight mt-6">CarrierBliss handles the admin. You run the operation.</h2>
-<p class="text-lg font-light text-secondary mt-8 max-w-2xl mx-auto leading-relaxed">CarrierBliss is a fleet management platform built for freight carriers who are done doing things manually.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto mb-14">
-<div class="space-y-4">
-<span class="material-symbols-outlined text-primary" data-icon="robot_2">robot_2</span>
-<p class="text-base font-light leading-relaxed text-on-surface">It reads your rate confirmations and populates your load tracking system automatically.</p>
-</div>
-<div class="space-y-4">
-<span class="material-symbols-outlined text-primary" data-icon="share_location">share_location</span>
-<p class="text-base font-light leading-relaxed text-on-surface">It tracks every load in real time.</p>
-</div>
-<div class="space-y-4">
-<span class="material-symbols-outlined text-primary" data-icon="group_add">group_add</span>
-<p class="text-base font-light leading-relaxed text-on-surface">It assigns drivers without the back-and-forth.</p>
-</div>
-<div class="space-y-4">
-<span class="material-symbols-outlined text-primary" data-icon="account_balance_wallet">account_balance_wallet</span>
-<p class="text-base font-light leading-relaxed text-on-surface">It calculates settlements accurately and generates a PDF for your drivers.</p>
-</div>
-</div>
-<div class="text-center mb-16">
-<p class="text-xl font-light tracking-tight text-on-surface">One platform. Every task. Zero manual entry.</p>
-</div>
-<!-- Visual Element: Task to Data Point -->
-<div class="bg-white rounded-2xl p-8 relative flex items-center justify-center gap-12 max-w-2xl mx-auto overflow-hidden">
-<div class="flex flex-col items-center gap-2 z-10">
-<div class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center border border-outline-variant/20">
-<span class="material-symbols-outlined text-secondary" data-icon="description">description</span>
-</div>
-<span class="text-[10px] uppercase font-medium text-secondary">Manual PDF</span>
-</div>
-<div class="flex-1 h-[2px] bg-surface-container-highest relative overflow-hidden">
-<div class="absolute inset-0 bg-primary w-20 animate-flow"></div>
-</div>
-<div class="flex flex-col items-center gap-2 z-10">
-<div class="w-16 h-16 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-black/10">
-<span class="material-symbols-outlined text-white" data-icon="database">database</span>
-</div>
-<span class="text-[10px] uppercase font-bold text-primary">Automated Data</span>
-</div>
-</div>
-</section>
-<!-- 3. HOW IT WORKS -->
-<section class="mt-40 mb-40">
-<div class="text-center mb-20">
-<h2 class="text-4xl font-light tracking-tight">Three steps. That's it.</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-<div class="text-center group">
-<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mx-auto mb-8 text-2xl font-light transition-colors group-hover:bg-primary group-hover:text-white">1</div>
-<h3 class="text-xl font-light mb-4">Connect your operation</h3>
-<p class="text-sm font-light text-secondary">CarrierBliss pulls in rate confirmations, loads, and driver data — no manual imports, no spreadsheets.</p>
-</div>
-<div class="text-center group">
-<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mx-auto mb-8 text-2xl font-light transition-colors group-hover:bg-primary group-hover:text-white">2</div>
-<h3 class="text-xl font-light mb-4">Automate the manual work</h3>
-<p class="text-sm font-light text-secondary">The platform handles data entry, load tracking, driver assignments, and settlement calculations automatically. You get notified. You approve. Done.</p>
-</div>
-<div class="text-center group">
-<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mx-auto mb-8 text-2xl font-light transition-colors group-hover:bg-primary group-hover:text-white">3</div>
-<h3 class="text-xl font-light mb-4">Scale without the overhead</h3>
-<p class="text-sm font-light text-secondary">Add loads without adding admin hours. Your team stays lean. Your operation grows. The platform scales with you.</p>
-</div>
-</div>
-</section>
-<!-- 4. FEATURES (Cards) -->
-<section class="mt-40 mb-40">
-<div class="mb-16">
-<span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Capabilities</span>
-<h2 class="text-4xl font-light tracking-tight mt-4">Everything your fleet needs. Nothing it doesn't.</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
-<span class="material-symbols-outlined text-primary mb-6" data-icon="auto_read_play">auto_read_play</span>
-<h4 class="font-light text-lg mb-3">Rate Confirmation Automation</h4>
-<p class="text-xs font-light text-secondary leading-relaxed">Rate confirmations processed automatically the moment they arrive. No more copy-pasting. No more manual errors. Every detail captured and logged without touching it.</p>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
-<span class="material-symbols-outlined text-primary mb-6" data-icon="my_location">my_location</span>
-<h4 class="font-light text-lg mb-3">Real-Time Load Tracking</h4>
-<p class="text-xs font-light text-secondary leading-relaxed">Every load. Every driver. Every status — visible in one place, updated in real time. Know where everything is without making a single call.</p>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
-<span class="material-symbols-outlined text-primary mb-6" data-icon="group_add">group_add</span>
-<h4 class="font-light text-lg mb-3">Driver Assignment</h4>
-<p class="text-xs font-light text-secondary leading-relaxed">Assign drivers to loads in seconds. Drivers receive and view load information on their mobile phones.</p>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
-<span class="material-symbols-outlined text-primary mb-6" data-icon="photo_camera">photo_camera</span>
-<h4 class="font-light text-lg mb-3">BOL Capture</h4>
-<p class="text-xs font-light text-secondary leading-relaxed">Drivers capture BOLs with their phones which then stores it in the admin load board for immediate access.</p>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
-<span class="material-symbols-outlined text-primary mb-6" data-icon="request_quote">request_quote</span>
-<h4 class="font-light text-lg mb-3">Automated Billing and Driver Settlements</h4>
-<p class="text-xs font-light text-secondary leading-relaxed">Billing and settlement calculations that used to take hours now take seconds. Accurate every time. PDFs are generated with one click.</p>
-</div>
-</div>
-</section>
-<!-- BLACK BANNER 2 -->
-<div class="bg-primary px-8 md:px-20 py-20 my-40" style="width: 100vw; margin-left: calc(50% - 50vw);">
-<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-<p class="text-3xl md:text-4xl font-light tracking-tight text-white leading-tight">Every load. Every driver.<br/>Every dollar. In one place.</p>
-<div class="flex flex-col sm:flex-row gap-8 md:gap-16 shrink-0">
-<div class="text-center md:text-left">
-<p class="text-4xl font-light text-white tracking-tight">12hrs</p>
-<p class="text-xs font-light text-white/50 uppercase tracking-widest mt-1">Saved per week</p>
-</div>
-<div class="text-center md:text-left">
-<p class="text-4xl font-light text-white tracking-tight">100%</p>
-<p class="text-xs font-light text-white/50 uppercase tracking-widest mt-1">Settlement accuracy</p>
-</div>
-<div class="text-center md:text-left">
-<p class="text-4xl font-light text-white tracking-tight">&lt;5min</p>
-<p class="text-xs font-light text-white/50 uppercase tracking-widest mt-1">Setup time</p>
-</div>
-</div>
-</div>
-</div>
-<!-- 5. ANALYTICS SECTION -->
-<section class="mt-40 mb-40">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-16">
-<div class="space-y-8 md:sticky md:top-32">
-<span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Analytics</span>
-<h2 class="text-4xl font-light tracking-tight leading-tight">Know exactly where every dollar comes from.</h2>
-<p class="text-secondary font-light leading-relaxed">Stop guessing which loads are profitable. CarrierBliss gives you a live view of your operation's performance — by load type, driver, and route — so you can make decisions on data, not instinct.</p>
-<ul class="space-y-5 pt-2">
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5" style="font-size:1.1rem" data-icon="bar_chart">bar_chart</span>
-<div>
-<p class="text-sm font-medium text-on-surface mb-0.5">Load Profitability</p>
-<p class="text-xs font-light text-secondary leading-relaxed">See which loads, lanes, and load types are actually making you money.</p>
-</div>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5" style="font-size:1.1rem" data-icon="speed">speed</span>
-<div>
-<p class="text-sm font-medium text-on-surface mb-0.5">Average Rate Per Mile</p>
-<p class="text-xs font-light text-secondary leading-relaxed">Track your average RPM across the entire fleet and by load type.</p>
-</div>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5" style="font-size:1.1rem" data-icon="person_check">person_check</span>
-<div>
-<p class="text-sm font-medium text-on-surface mb-0.5">Driver Efficiency</p>
-<p class="text-xs font-light text-secondary leading-relaxed">Identify your top performers and spot where productivity is being lost.</p>
-</div>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5" style="font-size:1.1rem" data-icon="donut_large">donut_large</span>
-<div>
-<p class="text-sm font-medium text-on-surface mb-0.5">Revenue Distribution</p>
-<p class="text-xs font-light text-secondary leading-relaxed">Understand your revenue split across load types at a glance.</p>
-</div>
-</li>
-</ul>
-</div>
-<!-- Dashboard screenshot -->
-<div class="rounded-[1.75rem] overflow-hidden shadow-2xl shadow-black/10 border border-outline-variant/10">
-<div class="bg-surface-container-low px-5 py-3.5 flex items-center gap-3 border-b border-outline-variant/10">
-<div class="flex gap-1.5">
-<div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
-</div>
-<div class="flex-1 bg-surface-container rounded-full px-4 py-1.5 text-[10px] text-secondary/50 font-light tracking-tight">app.carrierbliss.com/analytics</div>
-</div>
-<img src="assets/loads.jpeg" alt="CarrierBliss Load Analytics Dashboard — Revenue by Load Type, Revenue Distribution, Average Rate Per Mile" class="w-full block"/>
-</div>
-</div>
-</section>
-<!-- 7. NIGHTMARE vs DREAM STATE -->
-<section class="mt-40 mb-40 overflow-hidden">
-<div class="text-center mb-20 px-6">
-<h2 class="text-4xl font-light tracking-tight">Two versions of your operation. One decision.</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 rounded-[2rem] overflow-hidden border border-outline-variant/20">
-<!-- Nightmare -->
-<div class="bg-white p-12 md:p-16">
-<div class="flex items-center gap-3 mb-10 text-error">
-<span class="material-symbols-outlined" data-icon="sentiment_dissatisfied">sentiment_dissatisfied</span>
-<span class="text-[0.6875rem] uppercase font-bold tracking-widest">Without CarrierBliss</span>
-</div>
-<ul class="space-y-6">
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
-<span class="text-sm font-light text-secondary">Hours lost to copy-pasting rate confirmations every week.</span>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
-<span class="text-sm font-light text-secondary">Load status updates requiring searching for data in multiple folders.</span>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
-<span class="text-sm font-light text-secondary">Settlement errors that cost money and damage driver trust.</span>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
-<span class="text-sm font-light text-secondary">Admin time constraints that grow every time you add a load.</span>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
-<span class="text-sm font-light text-secondary">A ceiling on how far your fleet can scale.</span>
-</li>
-</ul>
-</div>
-<!-- Dream -->
-<div class="bg-surface-container-low p-12 md:p-16">
-<div class="flex items-center gap-3 mb-10 text-primary">
-<span class="material-symbols-outlined" data-icon="verified">verified</span>
-<span class="text-[0.6875rem] uppercase font-bold tracking-widest">With CarrierBliss</span>
-</div>
-<ul class="space-y-6">
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
-<span class="text-sm font-light text-on-surface">Rate confirmations processed the moment they arrive.</span>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
-<span class="text-sm font-light text-on-surface">Every load tracked automatically, in real time.</span>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
-<span class="text-sm font-light text-on-surface">Loads dispatched to driver's phones.</span>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
-<span class="text-sm font-light text-on-surface">Billing and Driver Settlements calculated accurately and approved in one click.</span>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
-<span class="text-sm font-light text-on-surface">Admin stays flat as your load count grows.</span>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
-<span class="text-sm font-light text-on-surface">A fleet that scales without scaling your headcount.</span>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- 8. PRICING SECTION -->
-<section id="pricing" class="mt-40 mb-40">
-<div class="text-center mb-16 space-y-4">
-<span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Pricing</span>
-<h2 class="text-4xl font-light tracking-tight">Simple pricing. No surprises.</h2>
-<p class="text-secondary font-light text-lg">Start free. Upgrade when you're ready.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+  <!-- TopAppBar -->
+  <header class="fixed top-0 w-full z-50 bg-[#f9f9f9]/70 dark:bg-slate-900/70 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-black dark:text-white" data-icon="grid_view">grid_view</span>
+        <span class="text-xl font-light tracking-tighter text-black dark:text-white">CarrierBliss</span>
+      </div>
+      <div class="flex items-center">
+        <button
+          class="text-gray-500 dark:text-gray-400 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors rounded-full font-light tracking-tight">Log
+          in</button>
+      </div>
+    </div>
+    <div class="bg-[#f3f3f4] dark:bg-slate-800 h-[1px] w-full"></div>
+  </header>
+  <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto relative">
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center text-center relative z-10 justify-center mb-0"
+      style="min-height: calc(100vh - 240px);">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl tracking-tight text-on-surface max-w-4xl leading-[1.1] mb-8">
+        <span class="hero-word" data-word="Put">Put</span> <span class="hero-word" data-word="Your">Your</span> <span
+          class="hero-word" data-word="Load">Load</span> <span class="hero-word"
+          data-word="Management">Management</span> <span class="hero-word" data-word="on">on</span> <span
+          class="hero-word-bold">Autopilot</span> <span class="hero-word" data-word="and">and</span> <span
+          class="hero-word" data-word="Reclaim">Reclaim</span> <span class="hero-word" data-word="Your">Your</span>
+        <span class="hero-word" data-word="Time.">Time.</span>
+      </h1>
+      <p class="text-lg md:text-xl font-light text-secondary max-w-2xl leading-relaxed mb-12">
+        CarrierBliss automates every manual task slowing your fleet down — rate confirmations, load tracking, driver
+        assignments, and settlements — all in one platform built specifically for freight carriers.
+      </p>
+      <div class="flex flex-col items-center gap-4">
+        <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})"
+          class="bg-primary text-on-primary px-10 py-5 rounded-full text-lg font-light hover:scale-95 transition-all duration-300 shadow-xl shadow-black/5">
+          Create your free trial account
+        </button>
+        <p class="text-xs font-light text-primary-fixed tracking-wide">
+          No credit card required. Set up in minutes.
+        </p>
+      </div>
+    </section>
+    <!-- Hero Dashboard Screenshot -->
+    <div class="w-full mb-40 relative">
+      <div
+        class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#f9f9f9] to-transparent z-10 pointer-events-none rounded-t-[2rem]">
+      </div>
+      <div
+        class="rounded-[2rem] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.12)] border border-outline-variant/10 transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_48px_100px_rgba(0,0,0,0.18)]">
+        <div class="bg-surface-container-low px-5 py-3.5 flex items-center gap-3 border-b border-outline-variant/10">
+          <div class="flex gap-1.5">
+            <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
+          </div>
+          <div
+            class="flex-1 bg-surface-container rounded-full px-4 py-1.5 text-[10px] text-secondary/50 font-light tracking-tight">
+            app.carrierbliss.com/dashboard</div>
+        </div>
+        <img src="assets/dashboard.png" alt="CarrierBliss Dashboard — Live operational overview" class="w-full block" />
+      </div>
+    </div>
+    <!-- 1. PROBLEM SECTION -->
+    <section class="mt-40 mb-40">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+          <span class="label-sm uppercase tracking-[0.05em] text-error font-medium text-[0.6875rem]">The Efficiency
+            Gap</span>
+          <h2 class="text-4xl font-light tracking-tight leading-tight">Manual data entry and using spreadsheets is
+            killing your margins and your time.</h2>
+          <div class="space-y-5 text-secondary font-light">
+            <p>Every rate confirmation that lands in your inbox gets saved in a folder and requires manual data entry in
+              multiple places.</p>
+            <p>Every load needs tracking. Every driver needs assigning. Every settlement needs calculating.</p>
+            <p class="text-on-surface font-medium text-lg tracking-tight">Manually.</p>
+            <p class="text-sm">For every single load.</p>
+            <p>That's not running a fleet. That's running a data entry operation that happens to move freight.</p>
+            <p>And as your load count grows the admin time doubles with it.</p>
+            <p>You're not short on drivers. You're not short on loads.</p>
+            <p class="text-on-surface font-medium">You're short on hours in the day.</p>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <img src="assets/newload.png" alt="CarrierBliss — Create New Load form with AI rate confirmation upload"
+            class="w-[27rem] rounded-2xl shadow-2xl shadow-black/10 border border-outline-variant/10" />
+        </div>
+      </div>
+    </section>
+    <!-- BLACK BANNER 1 -->
+    <div class="bg-primary px-8 md:px-20 py-20 my-40" style="width: 100vw; margin-left: calc(50% - 50vw);">
+      <div class="max-w-4xl mx-auto text-center space-y-4">
+        <p class="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-white leading-tight">The admin work
+          stops here.</p>
+        <p class="text-base md:text-lg font-light text-white/50 mt-6 leading-relaxed">Built for freight carriers who are
+          done doing things manually.</p>
+      </div>
+    </div>
+    <!-- 2. SOLUTION SECTION -->
+    <section class="mt-40 mb-40 py-24 bg-surface-container-low rounded-[3rem] px-8 md:px-16 overflow-hidden">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">The
+          CarrierBliss Way</span>
+        <h2 class="text-4xl md:text-5xl font-light tracking-tight mt-6">CarrierBliss handles the admin. You run the
+          operation.</h2>
+        <p class="text-lg font-light text-secondary mt-8 max-w-2xl mx-auto leading-relaxed">CarrierBliss is a fleet
+          management platform built for freight carriers who are done doing things manually.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto mb-14">
+        <div class="space-y-4">
+          <span class="material-symbols-outlined text-primary" data-icon="robot_2">robot_2</span>
+          <p class="text-base font-light leading-relaxed text-on-surface">It reads your rate confirmations and populates
+            your load tracking system automatically.</p>
+        </div>
+        <div class="space-y-4">
+          <span class="material-symbols-outlined text-primary" data-icon="share_location">share_location</span>
+          <p class="text-base font-light leading-relaxed text-on-surface">It tracks every load in real time.</p>
+        </div>
+        <div class="space-y-4">
+          <span class="material-symbols-outlined text-primary" data-icon="group_add">group_add</span>
+          <p class="text-base font-light leading-relaxed text-on-surface">It assigns drivers without the back-and-forth.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <span class="material-symbols-outlined text-primary"
+            data-icon="account_balance_wallet">account_balance_wallet</span>
+          <p class="text-base font-light leading-relaxed text-on-surface">It calculates settlements accurately and
+            generates a PDF for your drivers.</p>
+        </div>
+      </div>
+      <div class="text-center mb-16">
+        <p class="text-xl font-light tracking-tight text-on-surface">One platform. Every task. Zero manual entry.</p>
+      </div>
+      <!-- Visual Element: Task to Data Point -->
+      <div
+        class="bg-white rounded-2xl p-8 relative flex items-center justify-center gap-12 max-w-2xl mx-auto overflow-hidden">
+        <div class="flex flex-col items-center gap-2 z-10">
+          <div
+            class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center border border-outline-variant/20">
+            <span class="material-symbols-outlined text-secondary" data-icon="description">description</span>
+          </div>
+          <span class="text-[10px] uppercase font-medium text-secondary">Manual PDF</span>
+        </div>
+        <div class="flex-1 h-[2px] bg-surface-container-highest relative overflow-hidden">
+          <div class="absolute inset-0 bg-primary w-20 animate-flow"></div>
+        </div>
+        <div class="flex flex-col items-center gap-2 z-10">
+          <div class="w-16 h-16 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-black/10">
+            <span class="material-symbols-outlined text-white" data-icon="database">database</span>
+          </div>
+          <span class="text-[10px] uppercase font-bold text-primary">Automated Data</span>
+        </div>
+      </div>
+    </section>
+    <!-- 3. HOW IT WORKS -->
+    <section class="mt-40 mb-40">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl font-light tracking-tight">Three steps. That's it.</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+        <div class="text-center group">
+          <div
+            class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mx-auto mb-8 text-2xl font-light transition-colors group-hover:bg-primary group-hover:text-white">
+            1</div>
+          <h3 class="text-xl font-light mb-4">Connect your operation</h3>
+          <p class="text-sm font-light text-secondary">CarrierBliss pulls in rate confirmations, loads, and driver data
+            — no manual imports, no spreadsheets.</p>
+        </div>
+        <div class="text-center group">
+          <div
+            class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mx-auto mb-8 text-2xl font-light transition-colors group-hover:bg-primary group-hover:text-white">
+            2</div>
+          <h3 class="text-xl font-light mb-4">Automate the manual work</h3>
+          <p class="text-sm font-light text-secondary">The platform handles data entry, load tracking, driver
+            assignments, and settlement calculations automatically. You get notified. You approve. Done.</p>
+        </div>
+        <div class="text-center group">
+          <div
+            class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mx-auto mb-8 text-2xl font-light transition-colors group-hover:bg-primary group-hover:text-white">
+            3</div>
+          <h3 class="text-xl font-light mb-4">Scale without the overhead</h3>
+          <p class="text-sm font-light text-secondary">Add loads without adding admin hours. Your team stays lean. Your
+            operation grows. The platform scales with you.</p>
+        </div>
+      </div>
+    </section>
+    <!-- LOOM VIDEO / SEE IT IN ACTION -->
+    <section class="mt-40 mb-40 text-center">
+      <div class="mb-16">
+        <span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Demo</span>
+        <h2 class="text-4xl font-light tracking-tight mt-4">See it in action.</h2>
+        <p class="text-sm font-light text-secondary mt-6 max-w-xl mx-auto leading-relaxed">A quick walkthrough of how CarrierBliss handles everything from rate confirmation to driver settlement — end to end.</p>
+      </div>
+      <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-surface-container-lowest" style="aspect-ratio: 16/9; box-shadow: 0px 20px 40px rgba(26,28,28,0.06);">
+        <iframe src="https://www.loom.com/embed/2a2c0a102676476aaebbb2e35f504b71" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="absolute inset-0 w-full h-full" style="border: none;"></iframe>
+      </div>
+    </section>
+    <!-- STEP BY STEP WALKTHROUGH -->
+    <section class="mt-40 mb-40">
+      <div class="mb-16">
+        <span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Walkthrough</span>
+        <h2 class="text-4xl font-light tracking-tight mt-4">Step by step. No guesswork.</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Step 1 -->
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 20px 40px rgba(26,28,28,0.04);">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-sm font-light flex-shrink-0">1</div>
+            <h3 class="text-lg font-light tracking-tight">Rate Confirmation Arrives</h3>
+          </div>
+          <p class="text-sm font-light text-secondary leading-relaxed mb-6">The moment a rate confirmation hits your inbox, CarrierBliss reads it, extracts every detail, and logs the load automatically — no manual entry required.</p>
+          <div class="rounded-lg overflow-hidden">
+            <img src="assets/dashboard.png" alt="Step 1 placeholder" class="w-full h-auto"/>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 20px 40px rgba(26,28,28,0.04);">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-sm font-light flex-shrink-0">2</div>
+            <h3 class="text-lg font-light tracking-tight">Load Is Created</h3>
+          </div>
+          <p class="text-sm font-light text-secondary leading-relaxed mb-6">A new load record is generated instantly with all the relevant details — broker info, pickup and delivery locations, rate, and reference numbers — all in one place.</p>
+          <div class="rounded-lg overflow-hidden">
+            <img src="assets/loads.jpeg" alt="Step 2 placeholder" class="w-full h-auto"/>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 20px 40px rgba(26,28,28,0.04);">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-sm font-light flex-shrink-0">3</div>
+            <h3 class="text-lg font-light tracking-tight">Driver Gets Assigned</h3>
+          </div>
+          <p class="text-sm font-light text-secondary leading-relaxed mb-6">Assign a driver to the load in seconds. They receive the full load details directly on their phone — no calls, no PDFs forwarded over text.</p>
+          <div class="rounded-lg overflow-hidden">
+            <img src="assets/newload.png" alt="Step 3 placeholder" class="w-full h-auto"/>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 20px 40px rgba(26,28,28,0.04);">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-sm font-light flex-shrink-0">4</div>
+            <h3 class="text-lg font-light tracking-tight">Driver Captures BOL</h3>
+          </div>
+          <p class="text-sm font-light text-secondary leading-relaxed mb-6">On delivery, the driver photographs the Bill of Lading directly in the app. It uploads instantly and appears in the admin load board — no chasing, no missing documents.</p>
+          <div class="rounded-lg overflow-hidden">
+            <img src="assets/dashboard.png" alt="Step 4 placeholder" class="w-full h-auto"/>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 20px 40px rgba(26,28,28,0.04);">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-sm font-light flex-shrink-0">5</div>
+            <h3 class="text-lg font-light tracking-tight">Load Delivered &amp; Verified</h3>
+          </div>
+          <p class="text-sm font-light text-secondary leading-relaxed mb-6">The load status updates to delivered. All documentation is attached and verified. Your records are clean and ready for billing without lifting a finger.</p>
+          <div class="rounded-lg overflow-hidden">
+            <img src="assets/loads.jpeg" alt="Step 5 placeholder" class="w-full h-auto"/>
+          </div>
+        </div>
+        <!-- Step 6 -->
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 20px 40px rgba(26,28,28,0.04);">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-sm font-light flex-shrink-0">6</div>
+            <h3 class="text-lg font-light tracking-tight">Settlement Generated</h3>
+          </div>
+          <p class="text-sm font-light text-secondary leading-relaxed mb-6">Driver settlements and broker invoices are calculated automatically and exported as PDFs with one click. What used to take hours now takes seconds.</p>
+          <div class="rounded-lg overflow-hidden">
+            <img src="assets/newload.png" alt="Step 6 placeholder" class="w-full h-auto"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 4. FEATURES (Cards) -->
+    <section class="mt-40 mb-40">
+      <div class="mb-16">
+        <span
+          class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Capabilities</span>
+        <h2 class="text-4xl font-light tracking-tight mt-4">Everything your fleet needs. Nothing it doesn't.</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+          <span class="material-symbols-outlined text-primary mb-6" data-icon="auto_read_play">auto_read_play</span>
+          <h4 class="font-light text-lg mb-3">Rate Confirmation Automation</h4>
+          <p class="text-xs font-light text-secondary leading-relaxed">Rate confirmations processed automatically the
+            moment they arrive. No more copy-pasting. No more manual errors. Every detail captured and logged without
+            touching it.</p>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+          <span class="material-symbols-outlined text-primary mb-6" data-icon="my_location">my_location</span>
+          <h4 class="font-light text-lg mb-3">Real-Time Load Tracking</h4>
+          <p class="text-xs font-light text-secondary leading-relaxed">Every load. Every driver. Every status — visible
+            in one place, updated in real time. Know where everything is without making a single call.</p>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+          <span class="material-symbols-outlined text-primary mb-6" data-icon="group_add">group_add</span>
+          <h4 class="font-light text-lg mb-3">Driver Assignment</h4>
+          <p class="text-xs font-light text-secondary leading-relaxed">Assign drivers to loads in seconds. Drivers
+            receive and view load information on their mobile phones.</p>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+          <span class="material-symbols-outlined text-primary mb-6" data-icon="photo_camera">photo_camera</span>
+          <h4 class="font-light text-lg mb-3">BOL Capture</h4>
+          <p class="text-xs font-light text-secondary leading-relaxed">Drivers capture BOLs with their phones which then
+            stores it in the admin load board for immediate access.</p>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+          <span class="material-symbols-outlined text-primary mb-6" data-icon="request_quote">request_quote</span>
+          <h4 class="font-light text-lg mb-3">Automated Billing and Driver Settlements</h4>
+          <p class="text-xs font-light text-secondary leading-relaxed">Billing and settlement calculations that used to
+            take hours now take seconds. Accurate every time. PDFs are generated with one click.</p>
+        </div>
+      </div>
+    </section>
+    <!-- BLACK BANNER 2 -->
+    <div class="bg-primary px-8 md:px-20 py-20 my-40" style="width: 100vw; margin-left: calc(50% - 50vw);">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        <p class="text-3xl md:text-4xl font-light tracking-tight text-white leading-tight">Every load. Every
+          driver.<br />Every dollar. In one place.</p>
+        <div class="flex flex-col sm:flex-row gap-8 md:gap-16 shrink-0">
+          <div class="text-center md:text-left">
+            <p class="text-4xl font-light text-white tracking-tight">12hrs</p>
+            <p class="text-xs font-light text-white/50 uppercase tracking-widest mt-1">Saved per week</p>
+          </div>
+          <div class="text-center md:text-left">
+            <p class="text-4xl font-light text-white tracking-tight">100%</p>
+            <p class="text-xs font-light text-white/50 uppercase tracking-widest mt-1">Settlement accuracy</p>
+          </div>
+          <div class="text-center md:text-left">
+            <p class="text-4xl font-light text-white tracking-tight">&lt;5min</p>
+            <p class="text-xs font-light text-white/50 uppercase tracking-widest mt-1">Setup time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 5. ANALYTICS SECTION -->
+    <section class="mt-40 mb-40">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-16">
+        <div class="space-y-8 md:sticky md:top-32">
+          <span
+            class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Analytics</span>
+          <h2 class="text-4xl font-light tracking-tight leading-tight">Know exactly where every dollar comes from.</h2>
+          <p class="text-secondary font-light leading-relaxed">Stop guessing which loads are profitable. CarrierBliss
+            gives you a live view of your operation's performance — by load type, driver, and route — so you can make
+            decisions on data, not instinct.</p>
+          <ul class="space-y-5 pt-2">
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5" style="font-size:1.1rem"
+                data-icon="bar_chart">bar_chart</span>
+              <div>
+                <p class="text-sm font-medium text-on-surface mb-0.5">Load Profitability</p>
+                <p class="text-xs font-light text-secondary leading-relaxed">See which loads, lanes, and load types are
+                  actually making you money.</p>
+              </div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5" style="font-size:1.1rem"
+                data-icon="speed">speed</span>
+              <div>
+                <p class="text-sm font-medium text-on-surface mb-0.5">Average Rate Per Mile</p>
+                <p class="text-xs font-light text-secondary leading-relaxed">Track your average RPM across the entire
+                  fleet and by load type.</p>
+              </div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5" style="font-size:1.1rem"
+                data-icon="person_check">person_check</span>
+              <div>
+                <p class="text-sm font-medium text-on-surface mb-0.5">Driver Efficiency</p>
+                <p class="text-xs font-light text-secondary leading-relaxed">Identify your top performers and spot where
+                  productivity is being lost.</p>
+              </div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5" style="font-size:1.1rem"
+                data-icon="donut_large">donut_large</span>
+              <div>
+                <p class="text-sm font-medium text-on-surface mb-0.5">Revenue Distribution</p>
+                <p class="text-xs font-light text-secondary leading-relaxed">Understand your revenue split across load
+                  types at a glance.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Dashboard screenshot -->
+        <div class="rounded-[1.75rem] overflow-hidden shadow-2xl shadow-black/10 border border-outline-variant/10">
+          <div class="bg-surface-container-low px-5 py-3.5 flex items-center gap-3 border-b border-outline-variant/10">
+            <div class="flex gap-1.5">
+              <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
+            </div>
+            <div
+              class="flex-1 bg-surface-container rounded-full px-4 py-1.5 text-[10px] text-secondary/50 font-light tracking-tight">
+              app.carrierbliss.com/analytics</div>
+          </div>
+          <img src="assets/loads.jpeg"
+            alt="CarrierBliss Load Analytics Dashboard — Revenue by Load Type, Revenue Distribution, Average Rate Per Mile"
+            class="w-full block" />
+        </div>
+      </div>
+    </section>
+    <!-- 7. NIGHTMARE vs DREAM STATE -->
+    <section class="mt-40 mb-40 overflow-hidden">
+      <div class="text-center mb-20 px-6">
+        <h2 class="text-4xl font-light tracking-tight">Two versions of your operation. One decision.</h2>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 rounded-[2rem] overflow-hidden border border-outline-variant/20">
+        <!-- Nightmare -->
+        <div class="bg-white p-12 md:p-16">
+          <div class="flex items-center gap-3 mb-10 text-error">
+            <span class="material-symbols-outlined" data-icon="sentiment_dissatisfied">sentiment_dissatisfied</span>
+            <span class="text-[0.6875rem] uppercase font-bold tracking-widest">Without CarrierBliss</span>
+          </div>
+          <ul class="space-y-6">
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
+              <span class="text-sm font-light text-secondary">Hours lost to copy-pasting rate confirmations every
+                week.</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
+              <span class="text-sm font-light text-secondary">Load status updates requiring searching for data in
+                multiple folders.</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
+              <span class="text-sm font-light text-secondary">Settlement errors that cost money and damage driver
+                trust.</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
+              <span class="text-sm font-light text-secondary">Admin time constraints that grow every time you add a
+                load.</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-error mt-0.5 text-sm" data-icon="close">close</span>
+              <span class="text-sm font-light text-secondary">A ceiling on how far your fleet can scale.</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Dream -->
+        <div class="bg-surface-container-low p-12 md:p-16">
+          <div class="flex items-center gap-3 mb-10 text-primary">
+            <span class="material-symbols-outlined" data-icon="verified">verified</span>
+            <span class="text-[0.6875rem] uppercase font-bold tracking-widest">With CarrierBliss</span>
+          </div>
+          <ul class="space-y-6">
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
+              <span class="text-sm font-light text-on-surface">Rate confirmations processed the moment they
+                arrive.</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
+              <span class="text-sm font-light text-on-surface">Every load tracked automatically, in real time.</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
+              <span class="text-sm font-light text-on-surface">Loads dispatched to driver's phones.</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
+              <span class="text-sm font-light text-on-surface">Billing and Driver Settlements calculated accurately and
+                approved in one click.</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
+              <span class="text-sm font-light text-on-surface">Admin stays flat as your load count grows.</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-0.5 text-sm" data-icon="check">check</span>
+              <span class="text-sm font-light text-on-surface">A fleet that scales without scaling your
+                headcount.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 8. PRICING SECTION -->
+    <section id="pricing" class="mt-40 mb-40">
+      <div class="text-center mb-16 space-y-4">
+        <span
+          class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Pricing</span>
+        <h2 class="text-4xl font-light tracking-tight">Simple pricing. No surprises.</h2>
+        <p class="text-secondary font-light text-lg">Start free. Upgrade when you're ready.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
 
-<!-- Starter -->
-<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-[1.75rem] p-10 flex flex-col">
-<div class="mb-8">
-<p class="text-sm font-light text-secondary mb-1">Starter</p>
-<p class="text-xs font-light text-secondary/60 mb-8">Up to 10 trucks</p>
-<div class="flex items-end gap-1 mb-8">
-<span class="text-5xl font-light tracking-tight text-on-surface">$49</span>
-<span class="text-sm font-light text-secondary mb-2">/month</span>
-</div>
-<ul class="space-y-3.5">
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>Up to 10 trucks
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>Load management
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>Driver settlements
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>Invoice generation
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>Basic reporting
-</li>
-</ul>
-</div>
-<div class="mt-auto pt-8">
-<button class="w-full py-4 rounded-full border border-outline-variant/30 text-sm font-light text-on-surface hover:bg-surface-container transition-colors">
-Get started
-</button>
-</div>
-</div>
+        <!-- Starter -->
+        <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-[1.75rem] p-10 flex flex-col">
+          <div class="mb-8">
+            <p class="text-sm font-light text-secondary mb-1">Starter</p>
+            <p class="text-xs font-light text-secondary/60 mb-8">Up to 10 trucks</p>
+            <div class="flex items-end gap-1 mb-8">
+              <span class="text-5xl font-light tracking-tight text-on-surface">$49</span>
+              <span class="text-sm font-light text-secondary mb-2">/month</span>
+            </div>
+            <ul class="space-y-3.5">
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>Up to 10 trucks
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>Load management
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>Driver settlements
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>Invoice generation
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>Basic reporting
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto pt-8">
+            <button
+              class="w-full py-4 rounded-full border border-outline-variant/30 text-sm font-light text-on-surface hover:bg-surface-container transition-colors">
+              Get started
+            </button>
+          </div>
+        </div>
 
-<!-- Pro — Recommended -->
-<div class="bg-primary rounded-[1.75rem] p-10 flex flex-col relative shadow-2xl shadow-black/20 scale-[1.03]">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2">
-<span class="inline-flex items-center gap-1.5 bg-white text-primary text-[0.6875rem] font-medium uppercase tracking-[0.06em] px-4 py-1.5 rounded-full shadow-lg shadow-black/10">
-<span class="material-symbols-outlined" style="font-size:0.85rem" data-icon="workspace_premium">workspace_premium</span>
-Most Popular
-</span>
-</div>
-<div class="mb-8">
-<p class="text-sm font-light text-white/60 mb-1">Pro</p>
-<p class="text-xs font-light text-white/40 mb-8">Up to 30 trucks</p>
-<div class="flex items-end gap-1 mb-8">
-<span class="text-5xl font-light tracking-tight text-white">$99</span>
-<span class="text-sm font-light text-white/50 mb-2">/month</span>
-</div>
-<ul class="space-y-3.5">
-<li class="flex items-center gap-3 text-sm font-light text-white/80">
-<span class="material-symbols-outlined text-white" style="font-size:1rem" data-icon="check">check</span>Up to 30 trucks
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-white/80">
-<span class="material-symbols-outlined text-white" style="font-size:1rem" data-icon="check">check</span>Everything in Starter
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-white/80">
-<span class="material-symbols-outlined text-white" style="font-size:1rem" data-icon="check">check</span>Team management
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-white/80">
-<span class="material-symbols-outlined text-white" style="font-size:1rem" data-icon="check">check</span>Dispatcher settlements
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-white/80">
-<span class="material-symbols-outlined text-white" style="font-size:1rem" data-icon="check">check</span>Priority support
-</li>
-</ul>
-</div>
-<div class="mt-auto pt-8">
-<button class="w-full py-4 rounded-full bg-white text-primary text-sm font-medium hover:bg-white/90 transition-colors">
-Start free trial
-</button>
-</div>
-</div>
+        <!-- Pro — Recommended -->
+        <div class="bg-primary rounded-[1.75rem] p-10 flex flex-col relative shadow-2xl shadow-black/20 scale-[1.03]">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span
+              class="inline-flex items-center gap-1.5 bg-white text-primary text-[0.6875rem] font-medium uppercase tracking-[0.06em] px-4 py-1.5 rounded-full shadow-lg shadow-black/10">
+              <span class="material-symbols-outlined" style="font-size:0.85rem"
+                data-icon="workspace_premium">workspace_premium</span>
+              Most Popular
+            </span>
+          </div>
+          <div class="mb-8">
+            <p class="text-sm font-light text-white/60 mb-1">Pro</p>
+            <p class="text-xs font-light text-white/40 mb-8">Up to 30 trucks</p>
+            <div class="flex items-end gap-1 mb-8">
+              <span class="text-5xl font-light tracking-tight text-white">$99</span>
+              <span class="text-sm font-light text-white/50 mb-2">/month</span>
+            </div>
+            <ul class="space-y-3.5">
+              <li class="flex items-center gap-3 text-sm font-light text-white/80">
+                <span class="material-symbols-outlined text-white" style="font-size:1rem"
+                  data-icon="check">check</span>Up to 30 trucks
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-white/80">
+                <span class="material-symbols-outlined text-white" style="font-size:1rem"
+                  data-icon="check">check</span>Everything in Starter
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-white/80">
+                <span class="material-symbols-outlined text-white" style="font-size:1rem"
+                  data-icon="check">check</span>Team management
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-white/80">
+                <span class="material-symbols-outlined text-white" style="font-size:1rem"
+                  data-icon="check">check</span>Dispatcher settlements
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-white/80">
+                <span class="material-symbols-outlined text-white" style="font-size:1rem"
+                  data-icon="check">check</span>Priority support
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto pt-8">
+            <button
+              class="w-full py-4 rounded-full bg-white text-primary text-sm font-medium hover:bg-white/90 transition-colors">
+              Start free trial
+            </button>
+          </div>
+        </div>
 
-<!-- Enterprise -->
-<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-[1.75rem] p-10 flex flex-col">
-<div class="mb-8">
-<p class="text-sm font-light text-secondary mb-1">Enterprise</p>
-<p class="text-xs font-light text-secondary/60 mb-8">Unlimited trucks</p>
-<div class="flex items-end gap-1 mb-8">
-<span class="text-5xl font-light tracking-tight text-on-surface">$199</span>
-<span class="text-sm font-light text-secondary mb-2">/month</span>
-</div>
-<ul class="space-y-3.5">
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>Unlimited trucks
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>Everything in Pro
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>Custom integrations
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>Dedicated account manager
-</li>
-<li class="flex items-center gap-3 text-sm font-light text-secondary">
-<span class="material-symbols-outlined text-primary/60" style="font-size:1rem" data-icon="check">check</span>SLA &amp; uptime guarantee
-</li>
-</ul>
-</div>
-<div class="mt-auto pt-8">
-<button class="w-full py-4 rounded-full border border-outline-variant/30 text-sm font-light text-on-surface hover:bg-surface-container transition-colors">
-Get started
-</button>
-</div>
-</div>
+        <!-- Enterprise -->
+        <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-[1.75rem] p-10 flex flex-col">
+          <div class="mb-8">
+            <p class="text-sm font-light text-secondary mb-1">Enterprise</p>
+            <p class="text-xs font-light text-secondary/60 mb-8">Unlimited trucks</p>
+            <div class="flex items-end gap-1 mb-8">
+              <span class="text-5xl font-light tracking-tight text-on-surface">$199</span>
+              <span class="text-sm font-light text-secondary mb-2">/month</span>
+            </div>
+            <ul class="space-y-3.5">
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>Unlimited trucks
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>Everything in Pro
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>Custom integrations
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>Dedicated account manager
+              </li>
+              <li class="flex items-center gap-3 text-sm font-light text-secondary">
+                <span class="material-symbols-outlined text-primary/60" style="font-size:1rem"
+                  data-icon="check">check</span>SLA &amp; uptime guarantee
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto pt-8">
+            <button
+              class="w-full py-4 rounded-full border border-outline-variant/30 text-sm font-light text-on-surface hover:bg-surface-container transition-colors">
+              Get started
+            </button>
+          </div>
+        </div>
 
-</div>
-</section>
-<!-- 9. FINAL CTA SECTION -->
-<section class="mt-40 mb-20 text-center">
-<div class="max-w-3xl mx-auto space-y-10">
-<h2 class="text-4xl md:text-5xl font-light tracking-tight leading-tight">Your fleet is ready to scale. The admin doesn't have to scale with it.</h2>
-<p class="text-lg font-light text-secondary leading-relaxed">CarrierBliss is the platform freight carriers use to run leaner, move faster, and grow without the overhead.</p>
-<div class="flex flex-col items-center gap-6">
-<button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="bg-primary text-on-primary px-12 py-6 rounded-full text-xl font-light hover:scale-95 transition-all shadow-2xl">
-                        Start Free 14 Day Trial — no credit card required
-                    </button>
-<p class="text-xs font-light text-primary-fixed tracking-wide">Takes less than 5 minutes to set up.</p>
-<div class="flex flex-col gap-4 mt-2">
-<button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="text-sm font-medium flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors">
-<span class="text-primary">✓</span> Start automating my fleet
-                        </button>
-<button class="text-[10px] uppercase tracking-widest text-secondary/60 hover:text-secondary transition-colors font-light">
-<span class="opacity-50">✗</span> "I'll keep doing it manually"
-                        </button>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- BottomNavBar -->
-<nav class="md:hidden fixed bottom-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-2xl flex justify-around items-center px-4 pb-6 pt-3 shadow-[0px_-20px_40px_rgba(0,0,0,0.04)] rounded-t-3xl border-t border-gray-100 dark:border-gray-800">
-<div class="flex flex-col items-center justify-center bg-black dark:bg-white text-white dark:text-black rounded-full px-5 py-2 active:scale-90 duration-200">
-<span class="material-symbols-outlined" data-icon="home">home</span>
-<span class="text-[10px] font-light uppercase tracking-[0.05em]">Home</span>
-</div>
-<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-5 py-2 hover:text-black dark:hover:text-white">
-<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
-<span class="text-[10px] font-light uppercase tracking-[0.05em]">Shipments</span>
-</div>
-<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-5 py-2 hover:text-black dark:hover:text-white">
-<span class="material-symbols-outlined" data-icon="description">description</span>
-<span class="text-[10px] font-light uppercase tracking-[0.05em]">Documents</span>
-</div>
-<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-5 py-2 hover:text-black dark:hover:text-white">
-<span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
-<span class="text-[10px] font-light uppercase tracking-[0.05em]">Profile</span>
-</div>
-</nav>
-<!-- Desktop Footer -->
-<footer class="hidden md:block py-12 bg-surface text-center">
-<div class="max-w-7xl mx-auto px-6 border-t border-outline-variant/10 pt-12 flex justify-between items-center">
-<span class="text-sm font-light text-primary-fixed">© 2024 CarrierBliss Inc. All rights reserved.</span>
-<div class="flex gap-8">
-<a class="text-xs font-light uppercase tracking-widest text-primary hover:opacity-70" href="#">Terms</a>
-<a class="text-xs font-light uppercase tracking-widest text-primary hover:opacity-70" href="#">Privacy</a>
-<a class="text-xs font-light uppercase tracking-widest text-primary hover:opacity-70" href="#">Security</a>
-</div>
-</div>
-</footer>
-</body></html>
+      </div>
+    </section>
+    <!-- 9. FINAL CTA SECTION -->
+    <section class="mt-40 mb-20 text-center">
+      <div class="max-w-3xl mx-auto space-y-10">
+        <h2 class="text-4xl md:text-5xl font-light tracking-tight leading-tight">Your fleet is ready to scale. The admin
+          doesn't have to scale with it.</h2>
+        <p class="text-lg font-light text-secondary leading-relaxed">CarrierBliss is the platform freight carriers use
+          to run leaner, move faster, and grow without the overhead.</p>
+        <div class="flex flex-col items-center gap-6">
+          <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})"
+            class="bg-primary text-on-primary px-12 py-6 rounded-full text-xl font-light hover:scale-95 transition-all shadow-2xl">
+            Start Free 14 Day Trial — no credit card required
+          </button>
+          <p class="text-xs font-light text-primary-fixed tracking-wide">Takes less than 5 minutes to set up.</p>
+          <div class="flex flex-col gap-4 mt-2">
+            <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})"
+              class="text-sm font-medium flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors">
+              <span class="text-primary">✓</span> Start automating my fleet
+            </button>
+            <button
+              class="text-[10px] uppercase tracking-widest text-secondary/60 hover:text-secondary transition-colors font-light">
+              <span class="opacity-50">✗</span> "I'll keep doing it manually"
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- BottomNavBar -->
+  <nav
+    class="md:hidden fixed bottom-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-2xl flex justify-around items-center px-4 pb-6 pt-3 shadow-[0px_-20px_40px_rgba(0,0,0,0.04)] rounded-t-3xl border-t border-gray-100 dark:border-gray-800">
+    <div
+      class="flex flex-col items-center justify-center bg-black dark:bg-white text-white dark:text-black rounded-full px-5 py-2 active:scale-90 duration-200">
+      <span class="material-symbols-outlined" data-icon="home">home</span>
+      <span class="text-[10px] font-light uppercase tracking-[0.05em]">Home</span>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-5 py-2 hover:text-black dark:hover:text-white">
+      <span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+      <span class="text-[10px] font-light uppercase tracking-[0.05em]">Shipments</span>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-5 py-2 hover:text-black dark:hover:text-white">
+      <span class="material-symbols-outlined" data-icon="description">description</span>
+      <span class="text-[10px] font-light uppercase tracking-[0.05em]">Documents</span>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-5 py-2 hover:text-black dark:hover:text-white">
+      <span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+      <span class="text-[10px] font-light uppercase tracking-[0.05em]">Profile</span>
+    </div>
+  </nav>
+  <!-- Desktop Footer -->
+  <footer class="hidden md:block py-12 bg-surface text-center">
+    <div class="max-w-7xl mx-auto px-6 border-t border-outline-variant/10 pt-12 flex justify-between items-center">
+      <span class="text-sm font-light text-primary-fixed">© 2024 CarrierBliss Inc. All rights reserved.</span>
+      <div class="flex gap-8">
+        <a class="text-xs font-light uppercase tracking-widest text-primary hover:opacity-70" href="#">Terms</a>
+        <a class="text-xs font-light uppercase tracking-widest text-primary hover:opacity-70" href="#">Privacy</a>
+        <a class="text-xs font-light uppercase tracking-widest text-primary hover:opacity-70" href="#">Security</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
