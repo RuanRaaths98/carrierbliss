@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>FAQ | CarrierBliss</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#ffffff",
+            "tertiary": "#3a3c3c",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#1b1c1c",
+            "tertiary-fixed": "#5d5f5f",
+            "secondary-container": "#d6d4d3",
+            "on-tertiary-fixed-variant": "#e2e2e2",
+            "on-primary-fixed-variant": "#e2e2e2",
+            "on-secondary-fixed-variant": "#3b3b3b",
+            "on-error": "#ffffff",
+            "outline-variant": "#c6c6c6",
+            "tertiary-container": "#737575",
+            "on-primary-fixed": "#ffffff",
+            "secondary-fixed": "#c8c6c6",
+            "primary-fixed": "#5e5e5e",
+            "surface-dim": "#dadada",
+            "secondary-fixed-dim": "#acabab",
+            "surface": "#f9f9f9",
+            "on-primary-container": "#ffffff",
+            "surface-tint": "#5e5e5e",
+            "inverse-surface": "#2f3131",
+            "on-background": "#1a1c1c",
+            "on-primary": "#e2e2e2",
+            "error-container": "#ffdad6",
+            "surface-container-low": "#f3f3f4",
+            "primary-container": "#3b3b3b",
+            "outline": "#777777",
+            "on-error-container": "#410002",
+            "primary-fixed-dim": "#474747",
+            "inverse-primary": "#c6c6c6",
+            "inverse-on-surface": "#f0f1f1",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#1b1c1c",
+            "on-surface": "#1a1c1c",
+            "on-tertiary-fixed": "#ffffff",
+            "secondary": "#5f5e5e",
+            "tertiary-fixed-dim": "#454747",
+            "surface-variant": "#e2e2e2",
+            "surface-container": "#eeeeee",
+            "surface-bright": "#f9f9f9",
+            "on-tertiary": "#e2e2e2",
+            "error": "#ba1a1a",
+            "background": "#f9f9f9",
+            "surface-container-high": "#e8e8e8",
+            "surface-container-highest": "#e2e2e2",
+            "on-surface-variant": "#474747",
+            "primary": "#000000"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.2s ease; }
+  </style>
+</head>
+
+<body class="bg-surface text-on-background selection:bg-primary-container selection:text-white">
+  <!-- Nav -->
+  <header class="fixed top-0 w-full z-50 bg-[#f9f9f9]/70 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-black" data-icon="grid_view">grid_view</span>
+        <span class="text-xl font-light tracking-tighter text-black">CarrierBliss</span>
+      </a>
+      <div class="flex items-center gap-2">
+        <a href="testimonials.html" target="_blank"
+          class="text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 transition-colors tracking-tight text-on-surface">
+          Testimonials
+        </a>
+        <a href="faq.html" target="_blank"
+          class="text-sm font-light px-5 py-2 rounded-full bg-gray-100 transition-colors tracking-tight text-on-surface">
+          FAQ
+        </a>
+        <a href="index.html#pricing"
+          class="text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 transition-colors tracking-tight text-on-surface">
+          Pricing
+        </a>
+        <button class="text-gray-500 px-4 py-2 hover:bg-gray-100 transition-colors rounded-full font-light tracking-tight">Log in</button>
+      </div>
+    </div>
+    <div class="bg-[#f3f3f4] h-[1px] w-full"></div>
+  </header>
+
+  <main class="pt-40 pb-24 px-6 max-w-3xl mx-auto">
+    <div class="mb-16">
+      <span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">FAQ</span>
+      <h1 class="text-4xl font-light tracking-tight mt-4">Frequently asked questions.</h1>
+    </div>
+
+    <!-- Product & Features -->
+    <div class="mb-14">
+      <h2 class="text-xs font-medium uppercase tracking-widest text-primary-fixed mb-6">Product &amp; Features</h2>
+      <div class="space-y-3">
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">How does the automated data extraction work?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">CarrierBliss uses AI to read your PDF rate confirmations. When you upload a confirmation, the system automatically populates the load tracking details, eliminating manual data entry.</p>
+        </details>
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">What is the "Driver Portal"?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">It is a mobile-friendly interface where drivers can view their assigned load details, route information, and capture/upload Bills of Lading (BOL) directly from their phones upon delivery.</p>
+        </details>
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">Does CarrierBliss handle invoicing?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">Yes. You can generate professional broker/shipper invoices and driver settlement statements with a single click based on the completed load data.</p>
+        </details>
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">What kind of analytics does the platform provide?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">The dashboard tracks key performance indicators (KPIs) including Total Revenue, Average Rate per Mile (RPM), Load Profitability, and Driver Efficiency.</p>
+        </details>
+
+      </div>
+    </div>
+
+    <!-- Technical & Setup -->
+    <div class="mb-14">
+      <h2 class="text-xs font-medium uppercase tracking-widest text-primary-fixed mb-6">Technical &amp; Setup</h2>
+      <div class="space-y-3">
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">How long does it take to get started?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">Setup takes less than 5 minutes. You can create an account and begin managing loads immediately.</p>
+        </details>
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">Do my drivers need to download an app?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">The Driver Portal is accessible via mobile browser, so drivers can view load details and upload BOLs without needing to manage a complex app installation.</p>
+        </details>
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">Is my data secure?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">CarrierBliss is built with modern security standards in mind. See the Security link in the footer for specific protocols.</p>
+        </details>
+
+      </div>
+    </div>
+
+    <!-- Pricing & Subscription -->
+    <div class="mb-14">
+      <h2 class="text-xs font-medium uppercase tracking-widest text-primary-fixed mb-6">Pricing &amp; Subscription</h2>
+      <div class="space-y-3">
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">Is there a free trial?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">Yes, we offer a 14-day free trial with no credit card required to get started.</p>
+        </details>
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">How is CarrierBliss priced?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <div class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed space-y-2">
+            <p>We offer three tiers:</p>
+            <ul class="space-y-1 pl-4">
+              <li><span class="text-on-surface">Starter ($49/mo)</span> — Up to 10 trucks.</li>
+              <li><span class="text-on-surface">Pro ($99/mo)</span> — Up to 30 trucks, includes team management and priority support.</li>
+              <li><span class="text-on-surface">Enterprise ($199/mo)</span> — Unlimited trucks and custom integrations.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">Can I upgrade or downgrade my plan?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">Yes, you can change your plan at any time as your fleet grows or scales back.</p>
+        </details>
+
+      </div>
+    </div>
+
+    <!-- Operations -->
+    <div class="mb-14">
+      <h2 class="text-xs font-medium uppercase tracking-widest text-primary-fixed mb-6">Operations</h2>
+      <div class="space-y-3">
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">How does CarrierBliss help with driver settlements?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">The system automatically calculates what is owed to the driver based on the load data and generates a PDF settlement statement, ensuring 100% accuracy and reducing disputes.</p>
+        </details>
+
+        <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden" style="box-shadow: 0px 8px 24px rgba(26,28,28,0.04);">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="text-sm font-light text-on-surface">Can I manage dispatchers on this platform?</span>
+            <span class="material-symbols-outlined faq-icon text-secondary flex-shrink-0" style="font-size: 1.1rem;">add</span>
+          </summary>
+          <p class="px-6 pb-5 text-sm font-light text-secondary leading-relaxed">Yes, the Pro and Enterprise plans include team management features and dispatcher settlement tracking.</p>
+        </details>
+
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
