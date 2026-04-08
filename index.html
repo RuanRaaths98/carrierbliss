@@ -138,6 +138,10 @@
         <span class="text-xl font-light tracking-tighter text-black dark:text-white">CarrierBliss</span>
       </div>
       <div class="flex items-center gap-2">
+        <button onclick="document.getElementById('testimonials').scrollIntoView({behavior:'smooth'})"
+          class="text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors tracking-tight text-on-surface">
+          Testimonials
+        </button>
         <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})"
           class="text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors tracking-tight text-on-surface">
           Pricing
@@ -594,6 +598,43 @@
                 headcount.</span>
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="mt-40 mb-40">
+      <div class="mb-16">
+        <span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Testimonials</span>
+        <h2 class="text-4xl font-light tracking-tight mt-4">What carriers are saying.</h2>
+      </div>
+      <!-- Video testimonial -->
+      <div class="rounded-xl overflow-hidden mb-16 max-w-3xl" style="box-shadow: 0px 24px 48px rgba(26,28,28,0.07);">
+        <video controls class="w-full block" style="max-height: 520px; background: #000;">
+          <source src="assets/WhatsApp%20Video%202026-04-08%20at%2014.27.21.mp4" type="video/mp4"/>
+        </video>
+      </div>
+      <!-- Text testimonials (placeholders — swap copy when ready) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 16px 32px rgba(26,28,28,0.04);">
+          <p class="text-sm font-light text-secondary leading-relaxed mb-6">"CarrierBliss cut the time I spend on admin in half. Rate confirmations used to take 20 minutes each. Now it's instant."</p>
+          <div>
+            <p class="text-sm font-light text-on-surface">— Placeholder Name</p>
+            <p class="text-xs font-light text-secondary mt-1">Owner, Placeholder Trucking Co.</p>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 16px 32px rgba(26,28,28,0.04);">
+          <p class="text-sm font-light text-secondary leading-relaxed mb-6">"My drivers actually love the app. No more calls asking for load details. Everything they need is right on their phone."</p>
+          <div>
+            <p class="text-sm font-light text-on-surface">— Placeholder Name</p>
+            <p class="text-xs font-light text-secondary mt-1">Dispatcher, Placeholder Freight LLC</p>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 16px 32px rgba(26,28,28,0.04);">
+          <p class="text-sm font-light text-secondary leading-relaxed mb-6">"Settlements used to take me a full day every week. Now I generate them with one click. It's the best investment I've made."</p>
+          <div>
+            <p class="text-sm font-light text-on-surface">— Placeholder Name</p>
+            <p class="text-xs font-light text-secondary mt-1">Owner-Operator, Placeholder Logistics</p>
+          </div>
         </div>
       </div>
     </section>
