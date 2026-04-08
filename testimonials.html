@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Testimonials | CarrierBliss</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#ffffff",
+            "tertiary": "#3a3c3c",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#1b1c1c",
+            "tertiary-fixed": "#5d5f5f",
+            "secondary-container": "#d6d4d3",
+            "on-tertiary-fixed-variant": "#e2e2e2",
+            "on-primary-fixed-variant": "#e2e2e2",
+            "on-secondary-fixed-variant": "#3b3b3b",
+            "on-error": "#ffffff",
+            "outline-variant": "#c6c6c6",
+            "tertiary-container": "#737575",
+            "on-primary-fixed": "#ffffff",
+            "secondary-fixed": "#c8c6c6",
+            "primary-fixed": "#5e5e5e",
+            "surface-dim": "#dadada",
+            "secondary-fixed-dim": "#acabab",
+            "surface": "#f9f9f9",
+            "on-primary-container": "#ffffff",
+            "surface-tint": "#5e5e5e",
+            "inverse-surface": "#2f3131",
+            "on-background": "#1a1c1c",
+            "on-primary": "#e2e2e2",
+            "error-container": "#ffdad6",
+            "surface-container-low": "#f3f3f4",
+            "primary-container": "#3b3b3b",
+            "outline": "#777777",
+            "on-error-container": "#410002",
+            "primary-fixed-dim": "#474747",
+            "inverse-primary": "#c6c6c6",
+            "inverse-on-surface": "#f0f1f1",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#1b1c1c",
+            "on-surface": "#1a1c1c",
+            "on-tertiary-fixed": "#ffffff",
+            "secondary": "#5f5e5e",
+            "tertiary-fixed-dim": "#454747",
+            "surface-variant": "#e2e2e2",
+            "surface-container": "#eeeeee",
+            "surface-bright": "#f9f9f9",
+            "on-tertiary": "#e2e2e2",
+            "error": "#ba1a1a",
+            "background": "#f9f9f9",
+            "surface-container-high": "#e8e8e8",
+            "surface-container-highest": "#e2e2e2",
+            "on-surface-variant": "#474747",
+            "primary": "#000000"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+  </style>
+</head>
+
+<body class="bg-surface text-on-background selection:bg-primary-container selection:text-white">
+  <!-- Nav -->
+  <header class="fixed top-0 w-full z-50 bg-[#f9f9f9]/70 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-black" data-icon="grid_view">grid_view</span>
+        <span class="text-xl font-light tracking-tighter text-black">CarrierBliss</span>
+      </a>
+      <div class="flex items-center gap-2">
+        <a href="testimonials.html"
+          class="text-sm font-light px-5 py-2 rounded-full bg-gray-100 transition-colors tracking-tight text-on-surface">
+          Testimonials
+        </a>
+        <a href="index.html#pricing"
+          class="text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 transition-colors tracking-tight text-on-surface">
+          Pricing
+        </a>
+        <button class="text-gray-500 px-4 py-2 hover:bg-gray-100 transition-colors rounded-full font-light tracking-tight">Log in</button>
+      </div>
+    </div>
+    <div class="bg-[#f3f3f4] h-[1px] w-full"></div>
+  </header>
+
+  <main class="pt-40 pb-24 px-6 max-w-7xl mx-auto">
+    <div class="mb-16">
+      <span class="label-sm uppercase tracking-[0.05em] text-primary-fixed font-medium text-[0.6875rem]">Testimonials</span>
+      <h1 class="text-4xl font-light tracking-tight mt-4">What carriers are saying.</h1>
+    </div>
+
+    <!-- Video testimonial -->
+    <div class="rounded-xl overflow-hidden mb-16 max-w-3xl" style="box-shadow: 0px 24px 48px rgba(26,28,28,0.07);">
+      <video controls class="w-full block" style="max-height: 520px; background: #000;">
+        <source src="assets/WhatsApp%20Video%202026-04-08%20at%2014.27.21.mp4" type="video/mp4"/>
+      </video>
+    </div>
+
+    <!-- Text testimonials -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 16px 32px rgba(26,28,28,0.04);">
+        <p class="text-sm font-light text-secondary leading-relaxed mb-6">"CarrierBliss cut the time I spend on admin in half. Rate confirmations used to take 20 minutes each. Now it's instant."</p>
+        <div>
+          <p class="text-sm font-light text-on-surface">— Placeholder Name</p>
+          <p class="text-xs font-light text-secondary mt-1">Owner, Placeholder Trucking Co.</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 16px 32px rgba(26,28,28,0.04);">
+        <p class="text-sm font-light text-secondary leading-relaxed mb-6">"My drivers actually love the app. No more calls asking for load details. Everything they need is right on their phone."</p>
+        <div>
+          <p class="text-sm font-light text-on-surface">— Placeholder Name</p>
+          <p class="text-xs font-light text-secondary mt-1">Dispatcher, Placeholder Freight LLC</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10" style="box-shadow: 0px 16px 32px rgba(26,28,28,0.04);">
+        <p class="text-sm font-light text-secondary leading-relaxed mb-6">"Settlements used to take me a full day every week. Now I generate them with one click. It's the best investment I've made."</p>
+        <div>
+          <p class="text-sm font-light text-on-surface">— Placeholder Name</p>
+          <p class="text-xs font-light text-secondary mt-1">Owner-Operator, Placeholder Logistics</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
