@@ -237,6 +237,13 @@
     <!-- Hero Section -->
     <section class="flex flex-col items-center text-center relative z-10 justify-center mb-0"
       style="min-height: calc(100vh - 240px);">
+      <!-- Ambient hero glow -->
+      <div class="absolute inset-0 pointer-events-none -z-10" style="background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(74,127,181,0.09) 0%, rgba(107,159,212,0.04) 50%, transparent 80%);"></div>
+      <!-- Accent badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 text-xs font-light tracking-wide" style="border: 1px solid rgba(74,127,181,0.25); color: #4A7FB5; background: rgba(74,127,181,0.05);">
+        <span style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#4A7FB5,#6B9FD4);display:inline-block;"></span>
+        Built by a carrier. For carriers.
+      </div>
       <h1 class="text-4xl md:text-6xl lg:text-7xl tracking-tight text-on-surface max-w-4xl leading-[1.1] mb-8">
         <span class="hero-word" data-word="Logistics">Logistics</span> <span class="hero-word" data-word="Load">Load</span> <span class="hero-word" data-word="Management">Management</span><br/>
         <span class="hero-word" data-word="Built">Built</span> <span class="hero-word" data-word="by">by</span> <span class="hero-word" data-word="a">a</span> <span class="hero-word" data-word="Carrier">Carrier</span> <span class="hero-word" data-word="for">for</span> <span class="hero-metallic">Carriers</span>
@@ -247,10 +254,11 @@
       </p>
       <div class="flex flex-col items-center gap-4">
         <a href="https://carrierbliss.com/auth"
-          class="bg-primary text-on-primary px-10 py-5 rounded-full text-lg font-light hover:scale-95 transition-all duration-300 shadow-xl shadow-black/5">
+          class="px-10 py-5 rounded-full text-lg font-light hover:scale-95 transition-all duration-300 shadow-xl text-white"
+          style="background: linear-gradient(135deg, #4A7FB5 0%, #708090 60%, #6B9FD4 100%); box-shadow: 0 20px 40px rgba(74,127,181,0.25);">
           Create your free trial account
         </a>
-        <p class="text-xs font-light text-primary-fixed tracking-wide">
+        <p class="text-xs font-light tracking-wide" style="color: #4A7FB5;">
           No credit card required. Set up in minutes.
         </p>
       </div>
@@ -264,9 +272,9 @@
         class="rounded-[2rem] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.12)] border border-outline-variant/10 transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_48px_100px_rgba(0,0,0,0.18)]">
         <div class="bg-surface-container-low px-5 py-3.5 flex items-center gap-3 border-b border-outline-variant/10">
           <div class="flex gap-1.5">
-            <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></div>
+            <div class="w-2.5 h-2.5 rounded-full" style="background:#4A7FB5;opacity:0.7;"></div>
+            <div class="w-2.5 h-2.5 rounded-full" style="background:#708090;opacity:0.5;"></div>
+            <div class="w-2.5 h-2.5 rounded-full" style="background:#9BA8B5;opacity:0.4;"></div>
           </div>
           <div
             class="flex-1 bg-surface-container rounded-full px-4 py-1.5 text-[10px] text-secondary/50 font-light tracking-tight">
