@@ -131,6 +131,57 @@
       cursor: default;
     }
 
+    /* 1. Hero "Carriers" metallic gradient */
+    .hero-metallic {
+      display: inline-block;
+      font-variation-settings: 'wght' 700;
+      background: linear-gradient(135deg, #4A7FB5 0%, #9BA8B5 45%, #6B9FD4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      cursor: default;
+    }
+
+    /* 3. Nav sliding underline */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: calc(100% - 24px);
+      height: 2px;
+      background: linear-gradient(90deg, #4A7FB5, #9BA8B5);
+      border-radius: 2px;
+      transition: transform 0.25s ease;
+    }
+    .nav-link:hover::after { transform: translateX(-50%) scaleX(1); }
+
+    /* 4. Mesh texture for solution section */
+    .mesh-bg {
+      background-image:
+        radial-gradient(circle at 15% 25%, rgba(74,127,181,0.07) 0%, transparent 55%),
+        radial-gradient(circle at 85% 75%, rgba(112,128,144,0.07) 0%, transparent 55%),
+        radial-gradient(circle at 50% 50%, rgba(107,159,212,0.04) 0%, transparent 65%);
+    }
+
+    /* 5. Dashboard blue glow */
+    .dashboard-glow::before {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 10%;
+      width: 80%;
+      height: 120px;
+      background: radial-gradient(ellipse, rgba(74,127,181,0.18) 0%, transparent 70%);
+      filter: blur(24px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
     /* Metallic accent gradient */
     .metallic-badge {
       background: linear-gradient(135deg, #4A7FB5 0%, #708090 50%, #6B9FD4 100%);
@@ -159,19 +210,19 @@
       </div>
       <div class="flex items-center gap-2">
         <a href="index.html"
-          class="text-sm font-light px-5 py-2 rounded-full bg-gray-100 transition-colors tracking-tight text-on-surface">
+          class="nav-link text-sm font-light px-5 py-2 rounded-full bg-gray-100 transition-colors tracking-tight text-on-surface">
           Home
         </a>
         <a href="testimonials.html"
-          class="text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors tracking-tight text-on-surface">
+          class="nav-link text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors tracking-tight text-on-surface">
           Testimonials
         </a>
         <a href="faq.html"
-          class="text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors tracking-tight text-on-surface">
+          class="nav-link text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors tracking-tight text-on-surface">
           FAQ
         </a>
         <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})"
-          class="text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors tracking-tight text-on-surface">
+          class="nav-link text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors tracking-tight text-on-surface">
           Pricing
         </button>
       </div>
@@ -184,7 +235,7 @@
       style="min-height: calc(100vh - 240px);">
       <h1 class="text-4xl md:text-6xl lg:text-7xl tracking-tight text-on-surface max-w-4xl leading-[1.1] mb-8">
         <span class="hero-word" data-word="Logistics">Logistics</span> <span class="hero-word" data-word="Load">Load</span> <span class="hero-word" data-word="Management">Management</span><br/>
-        <span class="hero-word" data-word="Built">Built</span> <span class="hero-word" data-word="by">by</span> <span class="hero-word" data-word="a">a</span> <span class="hero-word" data-word="Carrier">Carrier</span> <span class="hero-word" data-word="for">for</span> <span class="hero-word-bold">Carriers</span>
+        <span class="hero-word" data-word="Built">Built</span> <span class="hero-word" data-word="by">by</span> <span class="hero-word" data-word="a">a</span> <span class="hero-word" data-word="Carrier">Carrier</span> <span class="hero-word" data-word="for">for</span> <span class="hero-metallic">Carriers</span>
       </h1>
       <p class="text-lg md:text-xl font-light text-secondary max-w-2xl leading-relaxed mb-12">
         CarrierBliss automates every manual task slowing your fleet down — rate confirmations, load tracking, driver
@@ -201,7 +252,7 @@
       </div>
     </section>
     <!-- Hero Dashboard Screenshot -->
-    <div class="w-full mb-40 relative">
+    <div class="w-full mb-40 relative dashboard-glow">
       <div
         class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#f9f9f9] to-transparent z-10 pointer-events-none rounded-t-[2rem]">
       </div>
@@ -256,7 +307,7 @@
       </div>
     </div>
     <!-- 2. SOLUTION SECTION -->
-    <section class="mt-40 mb-40 py-24 bg-surface-container-low rounded-[3rem] px-8 md:px-16 overflow-hidden">
+    <section class="mt-40 mb-40 py-24 bg-surface-container-low rounded-[3rem] px-8 md:px-16 overflow-hidden mesh-bg">
       <div class="max-w-4xl mx-auto text-center mb-16">
         <span class="label-sm uppercase tracking-[0.05em] font-medium text-[0.6875rem] metallic-badge">The
           CarrierBliss Way</span>
@@ -469,17 +520,17 @@
       <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         <p class="text-3xl md:text-4xl font-light tracking-tight text-white leading-tight">Every load. Every
           driver.<br />Every dollar. In one place.</p>
-        <div class="flex flex-col sm:flex-row gap-8 md:gap-16 shrink-0">
+        <div id="stats-section" class="flex flex-col sm:flex-row gap-8 md:gap-16 shrink-0">
           <div class="text-center md:text-left">
-            <p class="text-4xl font-light text-white tracking-tight">12hrs</p>
+            <p id="stat-hours" class="text-4xl font-light text-white tracking-tight">12hrs</p>
             <p class="text-xs font-light text-white/50 uppercase tracking-widest mt-1">Saved per week</p>
           </div>
           <div class="text-center md:text-left">
-            <p class="text-4xl font-light text-white tracking-tight">100%</p>
+            <p id="stat-accuracy" class="text-4xl font-light text-white tracking-tight">100%</p>
             <p class="text-xs font-light text-white/50 uppercase tracking-widest mt-1">Settlement accuracy</p>
           </div>
           <div class="text-center md:text-left">
-            <p class="text-4xl font-light text-white tracking-tight">&lt;5min</p>
+            <p id="stat-setup" class="text-4xl font-light text-white tracking-tight">&lt;5min</p>
             <p class="text-xs font-light text-white/50 uppercase tracking-widest mt-1">Setup time</p>
           </div>
         </div>
@@ -835,6 +886,42 @@
       </div>
     </div>
   </footer>
+  <script>
+    // 2. Animated counters
+    function animateCount(el, target, suffix, duration) {
+      let start = 0;
+      const increment = target / (duration / 16);
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+          el.textContent = target + suffix;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(start) + suffix;
+        }
+      }, 16);
+    }
+    let statsAnimated = false;
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !statsAnimated) {
+          statsAnimated = true;
+          animateCount(document.getElementById('stat-hours'), 12, 'hrs', 1400);
+          animateCount(document.getElementById('stat-accuracy'), 100, '%', 1400);
+          // animate setup: count 1→5 then prepend <
+          const setupEl = document.getElementById('stat-setup');
+          let s = 0;
+          const setupTimer = setInterval(() => {
+            s += 0.2;
+            if (s >= 5) { setupEl.textContent = '<5min'; clearInterval(setupTimer); }
+            else { setupEl.textContent = '<' + Math.ceil(s) + 'min'; }
+          }, 60);
+        }
+      });
+    }, { threshold: 0.6 });
+    const statsEl = document.getElementById('stats-section');
+    if (statsEl) statsObserver.observe(statsEl);
+  </script>
 </body>
 
 </html>
