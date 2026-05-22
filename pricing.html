@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-535SXLFX');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Pricing | CarrierBliss</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "surface": "#f9f9f9",
+            "surface-container-low": "#f3f3f4",
+            "surface-container": "#eeeeee",
+            "surface-container-high": "#e8e8e8",
+            "surface-container-highest": "#e2e2e2",
+            "on-surface": "#1a1c1c",
+            "secondary": "#5f5e5e",
+            "primary": "#000000",
+            "primary-fixed": "#5e5e5e",
+            "outline-variant": "#c6c6c6",
+            "metallic-blue": "#4A7FB5",
+            "metallic-grey": "#708090",
+          },
+          fontFamily: { "headline": ["Inter"], "body": ["Inter"], "label": ["Inter"] },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    .metallic-badge {
+      background: linear-gradient(135deg, #4A7FB5 0%, #708090 50%, #6B9FD4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: calc(100% - 24px);
+      height: 2px;
+      background: linear-gradient(90deg, #4A7FB5, #9BA8B5);
+      border-radius: 2px;
+      transition: transform 0.25s ease;
+    }
+    .nav-link:hover::after { transform: translateX(-50%) scaleX(1); }
+  </style>
+</head>
+
+<body class="bg-surface text-on-background selection:bg-primary-container selection:text-white">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-535SXLFX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Nav -->
+  <header class="fixed top-0 w-full z-50 bg-[#f9f9f9]/70 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-black" data-icon="grid_view">grid_view</span>
+        <span class="text-xl font-light tracking-tighter text-black">CarrierBliss</span>
+      </a>
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="nav-link text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 transition-colors tracking-tight text-on-surface">Home</a>
+        <a href="how-it-works.html" class="nav-link text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 transition-colors tracking-tight text-on-surface">How It Works</a>
+        <a href="testimonials.html" class="nav-link text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 transition-colors tracking-tight text-on-surface">Testimonials</a>
+        <a href="faq.html" class="nav-link text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 transition-colors tracking-tight text-on-surface">FAQ</a>
+        <a href="pricing.html" class="nav-link text-sm font-light px-5 py-2 rounded-full bg-gray-100 transition-colors tracking-tight text-on-surface">Pricing</a>
+        <a href="https://calendar.app.google/CH78yHkYgMv3pLt29" class="text-sm font-light px-5 py-2 rounded-full text-white hover:opacity-90 transition-opacity" style="background: linear-gradient(135deg, #4A7FB5, #708090);">Book a Demo</a>
+      </div>
+    </div>
+    <div class="bg-[#f3f3f4] h-[1px] w-full"></div>
+  </header>
+
+  <main class="pt-40 pb-24 px-6 max-w-7xl mx-auto">
+
+    <!-- Header -->
+    <div class="text-center mb-16 space-y-4">
+      <span class="label-sm uppercase tracking-[0.05em] font-medium text-[0.6875rem] metallic-badge">Pricing</span>
+      <h1 class="text-4xl md:text-5xl font-light tracking-tight">Simple pricing. No surprises.</h1>
+      <p class="text-secondary font-light text-lg">Start free. Upgrade when you're ready.</p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch max-w-5xl mx-auto">
+
+      <!-- Starter -->
+      <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-[1.75rem] p-8 flex flex-col">
+        <div class="mb-6">
+          <p class="text-base font-medium text-on-surface mb-0.5">Starter</p>
+          <p class="text-xs font-light text-secondary/70 mb-5">1-3 trucks</p>
+          <div class="flex items-end gap-1 mb-1">
+            <span class="text-4xl font-light tracking-tight text-on-surface">$29</span>
+            <span class="text-sm font-light text-secondary mb-1">/month</span>
+          </div>
+          <p class="text-xs font-light mb-5" style="color:#4A7FB5;">14-day free trial</p>
+          <ul class="space-y-2.5">
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Up to 3 trucks</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Load management</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Driver settlements</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Invoice generation</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Auto rate confirmation data extraction</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Team management</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Full reporting &amp; analytics</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Priority support</li>
+          </ul>
+        </div>
+        <div class="mt-auto pt-6">
+          <a href="https://carrierbliss.com/auth" class="block w-full py-3 rounded-full border border-outline-variant/30 text-sm font-light text-on-surface hover:bg-surface-container transition-colors text-center">Start Free Trial</a>
+        </div>
+      </div>
+
+      <!-- Growth — Most Popular -->
+      <div class="rounded-[1.75rem] p-8 flex flex-col relative border-2 scale-[1.03]" style="border-color:#4A7FB5; box-shadow: 0 20px 48px rgba(74,127,181,0.18);">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <span class="inline-flex items-center bg-amber-400 text-white text-[0.6rem] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full whitespace-nowrap">Most Popular</span>
+        </div>
+        <div class="mb-6 mt-2">
+          <p class="text-base font-medium text-on-surface mb-0.5">Growth</p>
+          <p class="text-xs font-light text-secondary/70 mb-5">4-10 trucks</p>
+          <div class="flex items-end gap-1 mb-1">
+            <span class="text-4xl font-light tracking-tight text-on-surface">$49</span>
+            <span class="text-sm font-light text-secondary mb-1">/month</span>
+          </div>
+          <p class="text-xs font-light mb-5" style="color:#4A7FB5;">14-day free trial</p>
+          <ul class="space-y-2.5">
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Up to 10 trucks</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Load management</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Driver settlements</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Invoice generation</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Auto rate confirmation data extraction</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Team management</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Full reporting &amp; analytics</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Priority support</li>
+          </ul>
+        </div>
+        <div class="mt-auto pt-6">
+          <a href="https://carrierbliss.com/auth" class="block w-full py-3 rounded-full text-sm font-medium text-white hover:opacity-90 transition-opacity text-center" style="background:#4A7FB5;">Start Free Trial</a>
+        </div>
+      </div>
+
+      <!-- Fleet -->
+      <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-[1.75rem] p-8 flex flex-col">
+        <div class="mb-6">
+          <p class="text-base font-medium text-on-surface mb-0.5">Fleet</p>
+          <p class="text-xs font-light text-secondary/70 mb-5">11+ trucks</p>
+          <div class="flex items-end gap-1 mb-1">
+            <span class="text-4xl font-light tracking-tight text-on-surface">$99</span>
+            <span class="text-sm font-light text-secondary mb-1">/month</span>
+          </div>
+          <p class="text-xs font-light mb-5" style="color:#4A7FB5;">14-day free trial</p>
+          <ul class="space-y-2.5">
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Unlimited trucks</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Load management</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Driver settlements</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Invoice generation</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Auto rate confirmation data extraction</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Team management</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Full reporting &amp; analytics</li>
+            <li class="flex items-center gap-2 text-xs font-light text-secondary"><span class="material-symbols-outlined" style="font-size:0.9rem;color:#4A7FB5" data-icon="check">check</span>Priority support</li>
+          </ul>
+        </div>
+        <div class="mt-auto pt-6">
+          <a href="https://carrierbliss.com/auth" class="block w-full py-3 rounded-full border border-outline-variant/30 text-sm font-light text-on-surface hover:bg-surface-container transition-colors text-center">Start Free Trial</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ nudge -->
+    <div class="mt-16 text-center space-y-3">
+      <p class="text-sm font-light text-secondary">Questions about which plan is right for you?</p>
+      <div class="flex items-center justify-center gap-4">
+        <a href="faq.html" class="text-sm font-light underline underline-offset-4 text-secondary hover:text-on-surface transition-colors">Read the FAQ</a>
+        <span class="text-secondary/30">·</span>
+        <a href="https://calendar.app.google/CH78yHkYgMv3pLt29" class="text-sm font-light underline underline-offset-4 text-secondary hover:text-on-surface transition-colors">Book a live demo</a>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
