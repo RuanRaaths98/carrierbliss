@@ -113,7 +113,7 @@
         <span class="material-symbols-outlined text-black" data-icon="grid_view">grid_view</span>
         <span class="text-xl font-light tracking-tighter text-black">CarrierBliss</span>
       </a>
-      <div class="flex items-center gap-2">
+      <div class="hidden md:flex items-center gap-2">
         <a href="index.html"
           class="text-sm font-light px-5 py-2 rounded-full hover:bg-gray-100 transition-colors tracking-tight text-on-surface">
           Home
@@ -144,5 +144,28 @@
       </a>
     </div>
   </main>
+  <!-- Mobile Bottom Nav -->
+  <nav class="md:hidden fixed bottom-0 w-full z-50 bg-white/90 backdrop-blur-2xl flex justify-around items-center px-2 pb-6 pt-3 shadow-[0px_-20px_40px_rgba(0,0,0,0.06)] rounded-t-3xl border-t border-gray-100">
+    <a href="index.html" class="flex flex-col items-center justify-center bg-black text-white px-4 py-2 rounded-full transition-all duration-200 active:scale-90">
+      <span class="material-symbols-outlined" style="font-size:1.25rem;">home</span>
+      <span class="text-[9px] font-light uppercase tracking-[0.05em] mt-0.5">Home</span>
+    </a>
+    <a href="how-it-works.html" class="flex flex-col items-center justify-center text-gray-400 px-4 py-2 rounded-full transition-all duration-200 active:scale-90">
+      <span class="material-symbols-outlined" style="font-size:1.25rem;">route</span>
+      <span class="text-[9px] font-light uppercase tracking-[0.05em] mt-0.5">How It Works</span>
+    </a>
+    <a href="pricing.html" class="flex flex-col items-center justify-center text-gray-400 px-4 py-2 rounded-full transition-all duration-200 active:scale-90">
+      <span class="material-symbols-outlined" style="font-size:1.25rem;">sell</span>
+      <span class="text-[9px] font-light uppercase tracking-[0.05em] mt-0.5">Pricing</span>
+    </a>
+    <a href="faq.html" class="flex flex-col items-center justify-center text-gray-400 px-4 py-2 rounded-full transition-all duration-200 active:scale-90">
+      <span class="material-symbols-outlined" style="font-size:1.25rem;">quiz</span>
+      <span class="text-[9px] font-light uppercase tracking-[0.05em] mt-0.5">FAQ</span>
+    </a>
+    <a href="https://calendar.app.google/CH78yHkYgMv3pLt29" class="flex flex-col items-center justify-center text-white px-4 py-2 rounded-full transition-all duration-200 active:scale-90" style="background: linear-gradient(135deg, #4A7FB5, #708090);">
+      <span class="material-symbols-outlined" style="font-size:1.25rem;">calendar_today</span>
+      <span class="text-[9px] font-light uppercase tracking-[0.05em] mt-0.5">Book Demo</span>
+    </a>
+  </nav>
 </body>
 </html>
